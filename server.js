@@ -32,7 +32,7 @@ app.get('/myapp/userList', async (req, res) => {
     }
 });
 
-app.post('/myapp/user/:_id/editInfo', async (req, res) => {
+app.get('/myapp/user/:_id/editInfo', async (req, res) => {
     try {
         const userId = req.params._id;
         const user = await User.findById(userId);
